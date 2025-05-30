@@ -15,13 +15,26 @@ Else
 6.	Return 0
  
 Program:
-
-//type your code here
-
-
+```
+#include <stdio.h>
+struct vaccine{
+    int age;
+    char name[20];
+};
+int main(){
+    struct vaccine v;
+    scanf("%d",&v.age);
+    scanf("%s",v.name);
+    printf("Age:%d\n",v.age);
+    printf("Name:%svaccine:%d\n",v.name,v.age);
+    (v.age>18) ? printf("eligibility:yes"): printf("eligibility:no");
+    
+}
+```
 Output:
 
-//paste your output here
+![Screenshot 2025-04-26 092045](https://github.com/user-attachments/assets/da2b6ad1-3a0b-4569-b693-a7cfe6efa089)
+
 
 
 Result:
@@ -43,8 +56,19 @@ Algorithm:
 7.	Return 0
  
 Program:
-
-//type your code here
+```
+#include<stdio.h>
+struct function
+{
+    int a,b;
+    
+};
+int main(){
+    struct function f;
+    scanf("%d%d",&f.a,&f.b);
+    printf("%d",f.a+f.b);
+}
+```
 
 
 
@@ -52,7 +76,9 @@ Program:
 Output:
 
 
-//paste your output here
+
+![Screenshot 2025-04-26 092510](https://github.com/user-attachments/assets/741f4d1b-e8b3-4acc-834e-603dada2056a)
+
 
 
 
@@ -85,8 +111,19 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
-
-//type your code here
+```
+#include <stdio.h>
+int main(){
+    FILE *fb;
+    char filename[20];
+    scanf("%s",filename);
+    fb=fopen(filename,"w");
+    printf("%s File Created Successfully\n",filename);
+    printf("%s File Opened\n",filename);
+    fclose(fb);
+    printf("%s File Closed",filename);
+}
+```
 
 
 
@@ -94,7 +131,8 @@ Program:
 Output:
 
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/b8af3af8-4da5-45aa-a153-c1e88940b42d)
+
 
 
 
@@ -132,8 +170,40 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
+#include <stdio.h>
 
-//type your code here
+int main() {
+    char filename[50];  
+    FILE *file;       
+    int n;              
+    char text[100];   
+    
+    scanf("%s", filename); 
+
+    file = fopen(filename, "w");
+    
+    if (file == NULL) {
+       
+        return 1;
+    }
+    printf("%s Opened\n", filename);
+
+    scanf("%d", &n);
+    getchar(); 
+
+    for (int i = 0; i < n; i++) {
+        
+        fgets(text, sizeof(text), stdin);  
+        fprintf(file, "%s", text);        
+    }
+    fclose(file);
+    printf("Data added Successfully\n");
+
+    return 0;
+}
+
+```
 
 
 
@@ -141,7 +211,8 @@ Program:
 Output:
 
 
-//paste your output here
+![Screenshot 2025-04-26 093005](https://github.com/user-attachments/assets/63bb5aa2-968b-4886-9284-e685545d25ee)
+
 
 
 
@@ -187,15 +258,35 @@ Algorithm:
 
 Program:
 
-//type your code here
+```
+#include<stdio.h>
+struct employee
+{
+    char Name[20];
+    int  ID;
+    float Salary;
+};
+int main()
+{
+    struct employee a;
+    scanf("%s",a.Name);
+    scanf("%d",&a.ID);
+    scanf("%f",&a.Salary);
+    printf("Displaying Information:\n");
+    printf("Name: %s\n",a.Name);
+    printf("Roll number: %d\n",a.ID);
+    printf("Marks: %.1f",a.Salary);
+    
 
-
+}
+```
 
 
 Output:
 
 
-//paste your output here
+![Screenshot 2025-04-26 093801](https://github.com/user-attachments/assets/4a26fe5b-aaa8-4911-b489-6e42b018299b)
+
 
 
 
